@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="IconAgency">
+  <description>PHP CodeSniffer</description>
+  <rule ref="PHPCompatibility"/>
+  <rule ref="WordPress"/>
+  <config name="testVersion" value="7.4"/>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+</ruleset>
