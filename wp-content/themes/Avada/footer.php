@@ -79,7 +79,7 @@ jQuery(function ($) {
 
 		 modal.dialog({
 			modal: true,
-			width: 1200 
+			width: 750 
 		});	
 
 		// Close when clicke outside
