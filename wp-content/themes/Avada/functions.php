@@ -51,3 +51,10 @@ if ( version_compare( $GLOBALS['wp_version'], AVADA_MIN_WP_VER_REQUIRED, '<' ) |
 require_once get_template_directory() . '/includes/bootstrap.php';
 
 /* Omit closing PHP tag to avoid "Headers already sent" issues. */
+
+// Add our styles
+function add_theme_styles() {
+  wp_register_style( 'avada_child', get_template_directory_uri() . '/updates.css'  );
+  wp_enqueue_style( 'avada_child' );
+}
+add_action( 'wp_enqueue_scripts', 'add_theme_styles' );

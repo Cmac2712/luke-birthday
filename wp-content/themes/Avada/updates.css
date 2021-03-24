@@ -1,0 +1,14 @@
+.ui-dialog-titlebar,
+.fusion-header,
+.fusion-header-sticky-height,
+.fusion-footer {
+	display: none!important;
+}
+
+.ui-widget.ui-widget-content,	
+.ui-dialog, 
+#video-modal {
+	font-size: 0!important;
+	padding: 0!important;
+	border: 0;
+}

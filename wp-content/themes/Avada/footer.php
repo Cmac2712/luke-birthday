@@ -59,8 +59,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="fusion-boxed-shadow"></div>
 		<a class="fusion-one-page-text-link fusion-page-load-link"></a>
 
+		<div id="video-modal"></div>
+
 		<div class="avada-footer-scripts">
 			<?php wp_footer(); ?>
 		</div>
+
+		<script>
+jQuery(function ($) {
+	const links = $('.fusion-layout-column a');
+	
+	const openInModal = e => {
+		const target = $(e.target);
+		const parent = target.parents('.fusion-layout-column'); 
+		const vid = parent.find('video');
+		const modal = $('#video-modal');
+
+		modal.html(vid.clone());
+
+		 modal.dialog({
+			modal: true,
+			width: 1200 
+		});	
+
+		// Close when clicke outside
+		$('.ui-widget-overlay').on('click', () => {
+			$('#video-modal').dialog('close');	
+		});
+		
+		e.preventDefault();
+	}
+	
+
+	links.on('click', e => openInModal(e));
+});
+		</script>
+
+
 	</body>
 </html>
